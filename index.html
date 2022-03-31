@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="utf-8">
+  <title>Filosoofiaolümpiaadi väitlusvooru ajavõtumasin</title>
+  <meta name="description" content="Filosoofiaolümpiaadi väitlusvooru ajavõtumasin">
+  <meta name="author" content="Märt Põder">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<div class="data">
+
+	</div>
+  
+  <div id="app"></div>
+
+	<div class="controls">
+
+    <div id="yes" onclick="setParty(true);">
+      <p>JAATUS</p>
+      <div id="yestext"></div>
+    </div>
+    
+    <div id="no" onclick="setParty(false);">
+      <p>EITUS</p>
+      <div id="notext"></div>
+    </div>
+
+    <a id="playpause" class="pause" onclick="pauseTimerOnOff(this);"></a>
+    <a id="clear" onclick="resetTimer();">🗘</a> 
+
+    <div class="rounds">
+      <a class="button" data-name="R1" data-switch=1 data-interval=240 onclick="startTimer(this);">Esimene</a>
+      <a class="button" data-name="R2" data-switch=1 data-interval=180 onclick="startTimer(this);">Teine</a> 
+      <a class="button" data-name="R3" data-switch=1 data-interval=120 onclick="startTimer(this);">Kolmas</a> 
+      <a class="button" data-name="X" data-max=2 data-interval=60 onclick="startTimer(this);">Ristküsitlus</a> 
+      <a class="button" data-name="T" data-max=2 data-interval=60 onclick="startTimer(this);">Taimaut</a> 
+    </div>
+	</div>
+
+</body>
+
+<audio id="start" src="start.ogg" preload="auto" \> 
+<audio id="beep" src="beep.ogg" preload="auto" \> 
+<audio id="timeup" src="timeup.ogg" preload="auto" \> 
+<audio id="timeup-short" src="timeup-short.ogg" preload="auto" \> 
+<audio id="warning" src="warning.ogg" preload="auto" \> 
+<audio id="in" src="in.ogg" preload="auto" \> 
+<audio id="out" src="out.ogg" preload="auto" \> 
+
+<script src="script.js"></script>
+
+</html>
